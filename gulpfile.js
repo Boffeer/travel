@@ -15,11 +15,11 @@ $.path.task.forEach(function(taskPath) {
 
 $.gulp.task('dev', $.gulp.series(
     'clean',
-    $.gulp.parallel('styles:dev', 'libs', 'pug', 'libsJS:dev', 'js:copy', 'svg', 'img:dev', 'fonts','svg:copy')));
+    $.gulp.parallel('styles:dev', 'pug', 'libsJS:dev', 'js:copy', 'css', 'svg', 'img:dev', 'fonts','svg:copy')));
 
 $.gulp.task('build', $.gulp.series(
     'clean',
-    $.gulp.parallel('styles:build', 'libs', 'pug', 'libsJS:build', 'js:copy', 'svg', 'img:build', 'fonts','svg:copy')));
+    $.gulp.parallel('styles:build', 'pug', 'libsJS:build', 'js:copy', 'css', 'svg', 'img:build', 'fonts','svg:copy')));
 
 $.gulp.task('default', $.gulp.series(
     'dev',
@@ -28,14 +28,3 @@ $.gulp.task('default', $.gulp.series(
         'serve'
     )
 ));
-
-$.gulp.task('ftp', function() {
-      return $.gulp.src('src/**')
-        .pipe($.gp.ftp({
-          host: '12.34.567.89',
-          user: 'user',
-          password: 'password',
-          remotePath: '/'
-        }))
-        .pipe($.gulp.noop());
-});
