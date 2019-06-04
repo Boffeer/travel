@@ -1,6 +1,6 @@
 .footer
   flex 0 0 auto
-  color #9b9b9b
+  color greyColor
   background-color: #efeeee
   &-wrap
   	wid()
@@ -11,9 +11,10 @@
  	&-bottom
  		display flex
  		border 1px solid #c9c9c9
+ 		heigth 485px
  	&-left
  		padding 45px 0 0 30px
- 		size(585px)
+ 		size(585px, 485px)
  		border-right 1px solid #c9c9c9
  	&-logo
  		margin 0 0 30px 0
@@ -47,7 +48,7 @@
  	&-social
  		display flex
  		justify-content space-between
- 		size(190px)
+ 		size(190px, 40px)
 	 	&-bg
 	 		display flex
 	 		justify-content center
@@ -58,11 +59,19 @@
 	 		border-radius 3px
 	 		&:hover
 	 			background-color mainColor
+.footer	 			
 	&-right
 		size(585px)
-		padding 30px 0 0 30px
-
+		padding 35px 0 0 30px
+	&__inputs
+		border none
+		border-bottom 1px solid #c9c9c9
+		background-color footerColor
+		margin 0 0 30px 0
+		height 30px
 	&-form
-		size(523px, 265px)
+		size(523px)
 		display flex
-		flex-flow column no-wrap
+		flex-direction column
+		&__message
+			height 125px
