@@ -122,7 +122,7 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    bottom: 15px;
 
     display: block;
 
@@ -192,7 +192,8 @@
     text-align: center;
 
     opacity: .25;
-    color: black;
+    background-color: #e8e8e8;
+    border-radius: 50%;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

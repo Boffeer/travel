@@ -1,0 +1,31 @@
+@media(max-width screenMD)
+	.nav
+		width 90%
+		&__menu
+			display none
+	.burger
+		size(40px, 40px)
+		cursor pointer
+		&__line
+			display block
+			position relative
+			top 5px
+			size(100%, 4px)
+			background-color mainColor
+			border-radius 4px
+			&:before
+				content ''
+				display block
+				position relative
+				top 12px
+				size(100%, 4px)
+				background-color mainColor
+			&:after
+				content ''
+				display block
+				position relative
+				top 20px
+				size(100%, 4px)
+				background-color mainColor
+				
+			
