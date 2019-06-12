@@ -1,31 +1,48 @@
 @media(max-width screenMD)
 	.nav
 		width 90%
+		position relative
 		&__menu
 			display none
+			&--active
+				display block !important
+				position absolute
 	.burger
+		display flex
+		justify-content space-around
+		flex-flow column wrap
 		size(40px, 40px)
 		cursor pointer
 		&__line
+			transition all .5s
 			display block
 			position relative
 			top 5px
 			size(100%, 4px)
 			background-color mainColor
 			border-radius 4px
-			&:before
-				content ''
-				display block
-				position relative
-				top 12px
-				size(100%, 4px)
-				background-color mainColor
-			&:after
-				content ''
-				display block
-				position relative
-				top 20px
-				size(100%, 4px)
-				background-color mainColor
+		&--active > *
+			transition all .5s
+			&:first-child
+				transform rotate(45deg)
+			&:last-child
+				transform rotate(-45deg)
+				margin-top -100%
+			&:nth-child(even)
+				display none
+			// &:before
+			// 	content ''
+			// 	display block
+			// 	position relative
+			// 	top 12px
+			// 	size(100%, 4px)
+			// 	background-color mainColor
+			// &:after
+			// 	content ''
+			// 	display block
+			// 	position relative
+			// 	top 20px
+			// 	size(100%, 4px)
+			// 	background-color mainColor
 				
 			

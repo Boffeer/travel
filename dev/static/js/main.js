@@ -43,3 +43,10 @@ $(document).ready(function () {
 	});
 });
 
+// burger
+$(document).ready(function() {
+	$('.burger').click(function(){
+		$(this).toggleClass('burger--active');
+		$('.nav__menu').toggleClass('nav-menu--active')
+	})
+});

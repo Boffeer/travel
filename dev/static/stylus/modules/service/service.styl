@@ -2,13 +2,27 @@
 	display flex
 	background-color #efeeee
 	width 100%
+	@media(min-width screenXL + 300px)
+		max-height 611px
+	@media(max-width 1800px)
+		width 100%
+		flex-flow column wrap
 	&-slider-wrap
-		margin-top 70px
 		width 50%
+		height 100%
 		overflow hidden
+		@media(max-width 1800px)
+			order 2
+			margin-left auto
+			margin-right auto
+	&-slider__item
+		width 640px
 	&-descr
 		width 50%
 		padding 55px 0 0 0
+		@media(max-width 1800px)
+			margin-left auto
+			margin-right auto
 	&__title
 		title()
 	&-features
@@ -16,8 +30,12 @@
 		justify-content space-around
 		flex-flow row wrap
 		padding 25px 0 0 25px
+		@media(max-width 1800px)
+			padding-left 0
+		
 	&-feature
-		size(300px, 220px)
+		// size(300px, 220px)
+		width 40%
 		margin 0 0 30px
 		color #959595
 		&__pic
