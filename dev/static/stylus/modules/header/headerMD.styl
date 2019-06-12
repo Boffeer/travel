@@ -4,9 +4,29 @@
 		position relative
 		&__menu
 			display none
-			&--active
-				display block !important
-				position absolute
+			flex-direction column
+			padding 0 0 0 30px
+			size(200px, auto)
+			position absolute
+			top 100px
+			right -10%
+			background-color #FFFFFF
+			transition translateX 2s
+			transform translateX(600px)
+		&__menu--active
+			display flex
+			transition translateX 2s
+			transform translateX(0)
+		&__item
+			height 50px	
+			padding 10px 0
+			border-bottom 2px solid mainColor
+			&:last-child
+				border none
+		&__link
+			display block
+			size(100%, 100%)
+			padding 0
 	.burger
 		display flex
 		justify-content space-around

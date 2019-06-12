@@ -47,6 +47,6 @@ $(document).ready(function () {
 $(document).ready(function() {
 	$('.burger').click(function(){
 		$(this).toggleClass('burger--active');
-		$('.nav__menu').toggleClass('nav-menu--active')
+		$('.nav__menu').toggleClass('nav__menu--active')
 	})
 });
